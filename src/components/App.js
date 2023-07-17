@@ -27,7 +27,7 @@ const App = () => {
         <div id='barOuter' style={{width: '500px', height: '15px', backgroundColor: 'grey'}}>
             <div id='barInner' style={{width: `${progress}px`, height: '100%', backgroundColor: 'blue'}}></div>
         </div>
-        <p>{progress}%</p>
+        <p>{Math.floor(progress/5)}%</p>
     </div>
   )
 }
