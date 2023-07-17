@@ -9,7 +9,7 @@ const App = () => {
 
     useEffect(()=> {
         let intervalId = setInterval(()=> {
-            setProgress(prev => prev+10)
+            setProgress(prev => prev+50)
         }, 1000); 
 
         return () => {
@@ -17,15 +17,15 @@ const App = () => {
         }
     }, []);
 
-    if(progress > 100){
+    if(progress > 500){
         setProgress(0)
     }
   
   return (
-    <div style={{width: '400px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{width: '600px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <h3>Progress Bar</h3>
-        <div id='barOuter' style={{width: '300px', height: '15px', backgroundColor: 'grey'}}>
-            <div id='barInner' style={{width: `${progress}%`, height: '100%', backgroundColor: 'blue'}}></div>
+        <div id='barOuter' style={{width: '500px', height: '15px', backgroundColor: 'grey'}}>
+            <div id='barInner' style={{width: `${progress}px`, height: '100%', backgroundColor: 'blue'}}></div>
         </div>
         <p>{progress}%</p>
     </div>
